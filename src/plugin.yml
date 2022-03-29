@@ -1,0 +1,48 @@
+name: HeavenAfterDeath
+version: '1.0'
+author: FuniverseMinne
+main: me.funiverseminne.heavenafterdeath.heavenAfterDeath
+api-version: 1.18
+website: N/A
+description: Send players to a configured world and position on death.
+commands:
+  had:
+    description: Basic command for HeavenAfterDeath.
+    permission: heavenafterdeath.command
+    permission-message: §cYou do not have permission to use this.
+  had set:
+    description: Set the "Heaven" respawn point.
+    permission: heavenafterdeath.command.set
+    permission-message: §cYou do not have permission to use this.
+  had reload:
+    description: Reload the config for HeavenAfterDeath.
+    permission: heavenafterdeath.command.reload
+    permission-message: §cYou do not have permission to use this.
+  had debugconfig:
+    description: Print config info to chat for debugging.
+    permission: heavenafterdeath.command.debugconfig
+    permission-message: §cYou do not have permission to use this.
+permissions:
+  heavenafterdeath.admin:
+    description: Grants access to all HeavenAfterDeath commands. (Does not include bypass)
+    default: op
+    children:
+      heaveafterdeath.command: true
+      heavenafterdeath.command.set: true
+      heavenafterdeath.command.reload: true
+      heavenafterdeath.command.debugconfig: true
+  heavenafterdeath.command:
+    description: Grants access to /had.
+    default: op
+  heavenafterdeath.command.set:
+    description: Grants access to /had set.
+    default: op
+  heavenafterdeath.command.reload:
+    description: Grants access to /had reload.
+    default: op
+  heavenafterdeath.command.debugconfig:
+    description: Grants access to /had debugconfig.
+    default: op
+  heavenafterdeath.bypass:
+    description: Allows the player to bypass spawning at the configured location.
+    default: op

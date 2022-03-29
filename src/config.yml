@@ -1,0 +1,38 @@
+#Thanks for downloading! This is my first plugin so please report any bugs you find to the discussion page!
+#
+#
+#
+#World where players should respawn
+mainWorld: world
+#Set to true after running the /had set or setting a location below.
+#This is to prevent people getting teleported before setting this up.
+locationEnabled: false
+#Location and world where players will go after pressing respawn.
+world: world
+x: 0
+y: 70
+z: 0
+rotation: 180
+#Should these coordinates be sent to chat when running /had set?
+sendToChat: true
+#
+#
+#
+#Should the plugin send a message when someone dies?
+sendMessage: true
+#Message that is sent to the player after respawning. Supports color codes.
+message: "&9You died and have respawned in Heaven."
+#
+#
+#
+#How long should players wait until they are returned?
+#This is in seconds, set to 0 to disable. If you have the respawn world separate from the main world, set this higher to compensate for load times.
+returnDelay: 0
+#Should players be returned to their spawn or the world spawn?
+#Valid settings: player, world
+returnLocation: player
+#
+#
+#
+#Please don't modify this
+configVersion: 1
